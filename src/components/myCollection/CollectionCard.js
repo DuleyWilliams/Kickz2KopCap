@@ -6,9 +6,19 @@ import { addShoe } from "../../modules/CollectionManager";
 import { useNavigate } from "react-router-dom";
 
 export const CollectionCard = ({ collection, handleDeleteCollection }) => {
+  const [myShoes, setMyShoe] = useState({
+    brand: collection.brand,
+    colorway: collection.colorway,
+    shoeId: collection.id,
+    img: collection.media.smallImageUrl,
+    name: collection.name,
+    title: collection.title,
+    year: collection.year,
+  });
+
   const handleClickSaveShoe = (event) => {
-    event.preventDefault(); //Prevents the browser from submitting the for
-    addShoe(collection).then(() => navigate("/view"));
+    event.preventDefault(); //Prevents the browser from submitting the form
+    addShoe(myShoes).then(() => navigate("/myCollection/added"));
   };
 
   const navigate = useNavigate();

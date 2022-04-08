@@ -4,13 +4,16 @@ const apiUrl = "https://v1-sneakers.p.rapidapi.com";
 
 export const getAllShoes = async () => {
   try {
-    const response = await fetch(`${apiUrl}/v1/sneakers?limit=16&brand=Nike`, {
-      method: "GET",
-      headers: {
-        "x-rapidapi-host": apiHost,
-        "x-rapidapi-key": apiKey,
-      },
-    });
+    const response = await fetch(
+      `${apiUrl}/v1/sneakers?limit=100&brand=Nike%2C%20Adidas'`,
+      {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": apiHost,
+          "x-rapidapi-key": apiKey,
+        },
+      }
+    );
 
     let data = await response.json();
     data = data.results;
@@ -41,7 +44,7 @@ export const deleteShoe = (id) => {
 };
 
 export const addShoe = (newShoe) => {
-  return fetch(`${remoteURL}/myCollection`, {
+  return fetch(`${remoteURL}/kicksDbApi`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

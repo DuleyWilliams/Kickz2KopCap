@@ -45,7 +45,7 @@ export const FindShoeList = () => {
           type="button"
           className="btn"
           onClick={() => {
-            navigate("/myCollection/find");
+            navigate("/myCollection/");
           }}
         >
           Find
