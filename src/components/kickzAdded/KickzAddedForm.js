@@ -1,43 +1,40 @@
-import React, { useState, useEffect } from "react"
-import {useNavigate, useParams} from "react-router-dom";
-import {getKickzById, updateKick} from "../../modules/KickzAddedManager"
-import "./KickzAddedForm.css"
+import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { getKickzById, updateKick } from "../../modules/KickzAddedManager";
+import "./KickzAddedForm.css";
 
 export const KickEditForm = () => {
   const [kick, setKick] = useState({ name: "", brand: "" });
   const [isLoading, setIsLoading] = useState(false);
 
-  const {kickId} = useParams();
+  const { kickId } = useParams();
   const navigate = useNavigate();
 
-  const handleFieldChange = evt => {
+  const handleFieldChange = (evt) => {
     const stateToChange = { ...kick };
     stateToChange[evt.target.id] = evt.target.value;
     setKick(stateToChange);
   };
 
-  const updateExistingKick = evt => {
-    evt.preventDefault()
+  const updateExistingKick = (evt) => {
+    evt.preventDefault();
     setIsLoading(true);
 
     // This is an edit, so we need the id
     const editedKick = {
       id: kickId,
       name: kick.name,
-      brand: kick.brand
+      brand: kick.brand,
     };
 
-  updateKick(editedKick)
-    .then(() => navigate("/added")
-    )
-  }
+    updateKick(editedKick).then(() => navigate("/added"));
+  };
 
   useEffect(() => {
-    getKickzById(kickId)
-      .then(kick => {
-        setKick(kick;
-        setIsLoading(false);
-      });
+    getKickzById(kickId).then((kick) => {
+      setKick(kick);
+      setIsLoading(false);
+    });
   }, []);
 
   return (
@@ -67,13 +64,16 @@ export const KickEditForm = () => {
           </div>
           <div className="alignRight">
             <button
-              type="button" disabled={isLoading}
+              type="button"
+              disabled={isLoading}
               onClick={updateExistingKick}
               className="btn btn-primary"
-            >Submit</button>
+            >
+              Submit
+            </button>
           </div>
         </fieldset>
       </form>
     </>
   );
-}
+};
