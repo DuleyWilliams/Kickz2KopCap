@@ -3,9 +3,9 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import { Login } from "./components/auth/Login";
 import { Register } from "./components/auth/Register";
 import { Home } from "./Home";
-import { CollectionCard } from "./components/myCollection/CollectionCard.js";
 import { CollectionView } from "./components/myCollection/CollectionView";
 import { CollectionList } from "./components/myCollection/CollectionList";
+import { KickzAddedList } from "./components/kickzAdded/KickzAddedList";
 
 import { FindShoeList } from "./components/myCollection/CollectionFind.js";
 
@@ -25,8 +25,6 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
         {/* Render the location list when http://localhost:3000/ */}
         <Route path="/" element={<Home />} />
 
-        {/* <Route path="/myCollection" element={<CollectionList />} /> */}
-
         <Route
           exact
           path="/myCollection/"
@@ -37,7 +35,15 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
           }
         />
 
-        {/* <Route path="/myCollection/view" element={<CollectionList />} /> */}
+        <Route
+          exact
+          path="/myCollection/added"
+          element={
+            <PrivateRoute>
+              <KickzAddedList />
+            </PrivateRoute>
+          }
+        />
 
         <Route path="/myCollection/view" element={<CollectionView />} />
 

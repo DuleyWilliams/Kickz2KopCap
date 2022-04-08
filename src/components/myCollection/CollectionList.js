@@ -28,7 +28,7 @@ export const CollectionList = () => {
     deleteShoe(id).then(() => getAllShoes().then(setShoes));
   };
 
-  // const getShoes = () => {
+  // const getKickz = () => {
   //   getAllShoes().then((shoes) => {
   //     setCollections(shoes)})
 
