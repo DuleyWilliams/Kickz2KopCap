@@ -48,7 +48,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
 
         <Route
           exact
-          path="/myCollection/extra"
+          path="/myCollection/extra/:kickId"
           element={
             <PrivateRoute>
               <KickEditForm />

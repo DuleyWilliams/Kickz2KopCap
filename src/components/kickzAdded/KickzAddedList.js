@@ -45,7 +45,7 @@ export const KickzAddedList = () => {
       <section className="container_button">
         <button
           type="button"
-          className="btn"
+          className="button-btn"
           onClick={() => {
             navigate("/myCollection/");
           }}

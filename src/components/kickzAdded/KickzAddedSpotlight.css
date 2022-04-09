@@ -1,0 +1,16 @@
+.kick-spotlight {
+    max-width: 400px;
+    display: flex;
+    border: 1px dashed gray;
+    padding: 10px;
+  }
+  
+  .kick-spotlight img {
+    width: 200px;
+    margin-right: 20px;
+  }
+  
+  .kick-spotlight p {
+    color: black;
+  }
+  

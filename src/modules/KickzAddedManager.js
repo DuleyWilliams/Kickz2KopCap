@@ -34,3 +34,13 @@ export const updateKick = (editedKick) => {
     body: JSON.stringify(editedKick),
   }).then((data) => data.json());
 };
+
+export const getRandomId = () => {
+  return fetch(`${remoteURL}/kicksDbApi`)
+    .then((result) => result.json())
+    .then((kickz) => {
+      const randomIndex = Math.floor(Math.random() * kickz.length);
+      const randomKick = kickz[randomIndex];
+      return randomKick.id;
+    });
+};

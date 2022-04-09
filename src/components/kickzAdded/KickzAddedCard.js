@@ -3,7 +3,7 @@ import "./KickzAdded.css";
 import { Link } from "react-router-dom";
 import { deleteKick } from "../../modules/KickzAddedManager";
 
-export const KickzAddedCard = ({ kick, handleDeleteKickz }) => {
+export const KickzAddedCard = ({ kick, handleDeleteKick }) => {
   // const [kick, setKick] = useState([]);
   // const [isLoading, setIsLoading] = useState([true]);
 
@@ -43,19 +43,18 @@ export const KickzAddedCard = ({ kick, handleDeleteKickz }) => {
         </h2>
         <p>Style: {kick.title}</p>
         <p>Colorway: {kick.colorway}</p> <p>year:{kick.year} </p>
-        <Link to={`/myCollection/extra`}>
-          <button type="button" onClick={""}>
-            Extra
-          </button>
-        </Link>
+        <Link to={`/myCollection/extra/${kick.id}`}>Extra</Link>
         <Link to={`/myCollection/added`}>
-          <button
+          {/* <button
             type="button"
             // disabled={isLoading}
-            onClick={handleDeleteKickz}
-          >
+            // onClick={handleDeleteKick(kick.id)}
+          > */}
+          <button type="button" onClick={() => handleDeleteKick(kick.id)}>
             Delete
           </button>
+
+          {/* </button> */}
         </Link>
       </div>
     </div>

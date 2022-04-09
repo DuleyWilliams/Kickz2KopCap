@@ -22,9 +22,11 @@ export const KickEditForm = () => {
 
     // This is an edit, so we need the id
     const editedKick = {
-      id: kickId,
+      id: parseInt(kickId),
       name: kick.name,
       brand: kick.brand,
+      whenPurchased: kick.whenPurchased,
+      whyDidYouBuy: kick.whyDidYouBuy,
     };
 
     updateKick(editedKick).then(() => navigate("/added"));
@@ -57,8 +59,18 @@ export const KickEditForm = () => {
               required
               className="form-control"
               onChange={handleFieldChange}
-              id="brand"
-              value={kick.brand}
+              id="whenPurchased"
+              value={kick.whenPurchased}
+            />
+            <label htmlFor="whenPurchased">When did you purchase?</label>
+
+            <input
+              type="radio"
+              required
+              className="form-control"
+              onChange={handleFieldChange}
+              id="whyDidYouBuy"
+              value={kick.whyDidYouBuy}
             />
             <label htmlFor="brand">Brand</label>
           </div>
