@@ -6,6 +6,7 @@ import { Home } from "./Home";
 import { CollectionView } from "./components/myCollection/CollectionView";
 import { CollectionList } from "./components/myCollection/CollectionList";
 import { KickzAddedList } from "./components/kickzAdded/KickzAddedList";
+import { KickEditForm } from "./components/kickzAdded/KickzAddedForm";
 
 import { FindShoeList } from "./components/myCollection/CollectionFind.js";
 
@@ -41,6 +42,16 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
           element={
             <PrivateRoute>
               <KickzAddedList />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          exact
+          path="/myCollection/extra/:kickId"
+          element={
+            <PrivateRoute>
+              <KickEditForm />
             </PrivateRoute>
           }
         />

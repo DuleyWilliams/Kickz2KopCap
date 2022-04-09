@@ -40,7 +40,7 @@ export const CollectionList = () => {
       <section className="section-header">
         <h1>Add Sneakers</h1>
       </section>
-      <section className="section-content">
+      <section className="section-btn">
         <button
           type="button"
           className="btn"
