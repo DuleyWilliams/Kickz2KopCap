@@ -24,14 +24,14 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
           </Link>
         </li>
       ) : null}
-      {/* {isAuthenticated ? (
+      {isAuthenticated ? (
         <li className="navbar__item">
-          <Link className="navbar__link" to="">
+          <Link className="navbar__link" to="/myCollection/added">
             Wish List
           </Link>
         </li>
       ) : null}
-      {isAuthenticated ? (
+      {/* {isAuthenticated ? (
         <li className="navbar__item">
           <Link className="navbar__link" to="">
             Kop Or Drop
