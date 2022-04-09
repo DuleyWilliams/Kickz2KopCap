@@ -12,26 +12,41 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
   return (
     <ul className="navbar">
+      <li className="navbar__image">
+        <Link className="navbar__link" to="/"></Link>
+      </li>
       <li className="navbar__item active">
-        <Link className="navbar__link" to="/">
+        <Link
+          className="navbar__link"
+          to="/"
+          style={{ textDecoration: "none" }}
+        >
           Home
         </Link>
       </li>
       {isAuthenticated ? (
         <li className="navbar__item">
-          <Link className="navbar__link" to="/myCollection ">
+          <Link
+            className="navbar__link"
+            to="/myCollection "
+            style={{ textDecoration: "none" }}
+          >
             My Collection
           </Link>
         </li>
       ) : null}
-      {/* {isAuthenticated ? (
+      {isAuthenticated ? (
         <li className="navbar__item">
-          <Link className="navbar__link" to="">
+          <Link
+            className="navbar__link"
+            to="/myCollection/added"
+            style={{ textDecoration: "none" }}
+          >
             Wish List
           </Link>
         </li>
       ) : null}
-      {isAuthenticated ? (
+      {/* {isAuthenticated ? (
         <li className="navbar__item">
           <Link className="navbar__link" to="">
             Kop Or Drop

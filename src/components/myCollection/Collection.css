@@ -52,7 +52,7 @@ img.card-close {
   color: darkslategrey;
 }
 
-.card button {
+/* .card button {
   background-color: cornflowerblue;
   border: none;
   color: cornsilk;
@@ -68,7 +68,7 @@ img.card-close {
 
 .card button:hover {
   background-color: darkblue;
-}
+} */
 
 .card-close {
   color: #fff;
