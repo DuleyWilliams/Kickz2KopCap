@@ -20,3 +20,31 @@ code {
   row-gap: 10px;
   column-gap: 15px;
 }
+
+.left_home{
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2em;
+  width: 100%;
+}
+
+.right_home{
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 10px;
+  column-gap: 15px;
+  padding: 1em;
+  /* width:54%; */
+  vertical-align: baseline;
+}
+
+.home--buttons {
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px
+}
+
+.main{
+display:flex;
+
+}

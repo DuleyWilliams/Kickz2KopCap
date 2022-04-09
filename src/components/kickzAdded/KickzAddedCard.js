@@ -43,14 +43,12 @@ export const KickzAddedCard = ({ kick, handleDeleteKick }) => {
         </h2>
         <p>Style: {kick.title}</p>
         <p>Colorway: {kick.colorway}</p> <p>year:{kick.year} </p>
-        <button type="button">
-          <Link
-            to={`/myCollection/extra/${kick.id}`}
-            style={{ textDecoration: "none" }}
-          >
-            Extra
-          </Link>
-        </button>
+        <Link
+          to={`/myCollection/extra/${kick.id}`}
+          style={{ textDecoration: "none" }}
+        >
+          <button type="button">Extra</button>
+        </Link>
         <Link to={`/myCollection/added`}>
           <button type="button" onClick={() => handleDeleteKick(kick.id)}>
             Delete
