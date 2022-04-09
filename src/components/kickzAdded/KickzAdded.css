@@ -15,12 +15,17 @@
   }
   
   img {
-    width: 150px;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
   }
   
-  img.card-close {
+  /* img.card-close {
     width: 10%;
-  }
+  } */
   
   .card {
     /* Add shadows to create the "card" effect */
@@ -53,7 +58,21 @@
   }
   
   .card button {
-    background-color: cornflowerblue;
+    background-color: #ECF2FE;
+    border-style: solid;
+    border-color: #547FF3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 7px;
+    margin: 0.1em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+    /* background-color: cornflowerblue;
     border: none;
     color: cornsilk;
     text-align: center;
@@ -63,11 +82,12 @@
     padding: 0.5em;
     border-radius: 2px;
     margin: 0.1em;
-    width: 100%;
-  }
+    width: 100%; */
+  
   
   .card button:hover {
-    background-color: darkblue;
+    background-color: #3371F2;
+    background: #fff;
   }
   
   .card-close {
@@ -81,3 +101,31 @@
     border: 2px solid #333;
   }
   
+  .button-btn {
+    align-items: center;
+  }
+  
+  .section-btn{
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 3em;
+  
+  }
+  
+  .button-btn {
+    background-color: #ECF2FE;
+    border-style: solid;
+    border-color: #547FF3;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 7px;
+    margin: 0.1em;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+  }

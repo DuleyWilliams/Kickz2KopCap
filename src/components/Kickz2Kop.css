@@ -8,7 +8,7 @@ body,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #3371F2;
   font-family: 'Roboto', sans-serif;
   font-size: 15px;
   line-height: 1.5;
@@ -45,4 +45,39 @@ address {
 
 .button-btn {
   align-items: center;
+}
+
+.section-btn{
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 3em;
+
+}
+
+.btn {
+  background-color: #ECF2FE;
+  border-style: solid;
+  border-color: #547FF3;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 7px;
+  margin: 0.1em;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container_button{
+  text-align: center;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 3em;
+
 }

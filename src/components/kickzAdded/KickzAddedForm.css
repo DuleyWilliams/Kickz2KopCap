@@ -1,4 +1,4 @@
-fieldset {
+/* fieldset {
     max-width: 40em;
     padding: 4px;
     margin: 2em auto;
@@ -6,8 +6,19 @@ fieldset {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     background: aliceblue;
-  }
+  } */
   
+  fieldset {
+    max-width: 29em;
+    padding: 10px;
+    /* margin: 2em auto; */
+    /* border: 0 none; */
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    /* background: aliceblue; */
+  } 
+
+
   fieldset input,
   fieldset button,
   fieldset select {

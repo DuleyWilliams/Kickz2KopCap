@@ -28,9 +28,9 @@ export const Home = () => {
         <button type="submit">Login</button>
       </Link>
 
-      <h1>Kickz Spotlight</h1>
+      {/* <h1>Kickz Spotlight</h1>
       <button onClick={refreshSpotlightKick}>Reload &#x27f3;</button>
-      {spotlightId && <KickSpotlight KickId={spotlightId} />}
+      {spotlightId && <KickSpotlight KickId={spotlightId} />} */}
     </>
   );
 };
