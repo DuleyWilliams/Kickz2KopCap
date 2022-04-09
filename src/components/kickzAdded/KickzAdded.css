@@ -129,3 +129,15 @@
     justify-content: center;
     align-items: center;
   }
+
+  .brand--logos{
+    margin-top: 2em;
+    justify-content: left;
+    align-items: left;
+    width: 30%;
+
+  }
+
+  .full-site{
+    display: flex;
+  }

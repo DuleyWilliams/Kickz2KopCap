@@ -18,7 +18,10 @@ h1 {
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
-h2,
+h2 {
+font-size: 2rem;
+font-family: 'Raleway', sans-serif;
+}
 h3,
 h4,
 h5,
@@ -79,5 +82,33 @@ address {
   align-items: center;
   margin: auto;
   margin-bottom: 3em;
+
+}
+
+.home--button{
+  background-color: #ECF2FE;
+  border-style: solid;
+  border-color: #547FF3;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 7px;
+  margin: 0.1em;
+  width: 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+img.brand-logos{
+  text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+}
+
+.brand-box{
 
 }

@@ -27,6 +27,7 @@ export const KickEditForm = () => {
       brand: kick.brand,
       whenPurchased: kick.whenPurchased,
       whyDidYouBuy: kick.whyDidYouBuy,
+      wherePurchased: kick.wherePurchased,
     };
 
     updateKick(editedKick).then(() => navigate("/added"));
@@ -41,18 +42,19 @@ export const KickEditForm = () => {
 
   return (
     <>
+      <h1>Extras</h1>
       <form>
-        <fieldset>
+        <fieldset className="extraform">
           <div className="formgrid">
             <input
               type="text"
               required
               className="form-control"
               onChange={handleFieldChange}
-              id="name"
-              value={kick.name}
+              id="whyDidYouBuy"
+              value={kick.whyDidYouBuy}
             />
-            <label htmlFor="name">Kick name</label>
+            <label htmlFor="whyDidYouBuy">Why did you purchase?</label>
 
             <input
               type="text"
@@ -65,14 +67,14 @@ export const KickEditForm = () => {
             <label htmlFor="whenPurchased">When did you purchase?</label>
 
             <input
-              type="radio"
+              type="text-area"
               required
               className="form-control"
               onChange={handleFieldChange}
-              id="whyDidYouBuy"
-              value={kick.whyDidYouBuy}
+              id="wherePurchased"
+              value={kick.wherePurchased}
             />
-            <label htmlFor="brand">Brand</label>
+            <label htmlFor="wherePurchased">Where did you purchase?</label>
           </div>
           <div className="alignRight">
             <button
